@@ -6,8 +6,8 @@ import { useState } from 'react'
 
 import showOrHideImage from "../assets/icons/ShowOrHide.png"
 
-export default function SearchField() {
-    const [selectedSort, setSelectedSort] = useState('Недавние');
+export default function SearchField({pokemonTypes}) {
+    const [selectedSort, setSelectedSort] = useState('normal');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const handleSortSelect = (sortOption) => {
@@ -44,6 +44,9 @@ export default function SearchField() {
                         </span>
                     }>
                         <div className='flex-col-sb-right'>
+                            {pokemonTypes.map((type.results)=>{
+                                return <option value={school.id}>{school.name}</option> <Dropdown.Item onClick={() => handleSortSelect(type.result)}>Недавние</Dropdown.Item>
+                            })}
                             <Dropdown.Item onClick={() => handleSortSelect('Недавние')}>Недавние</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleSortSelect('Наиболее популярные')}>Наиболее популярные</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleSortSelect('А-Я')}>А-Я</Dropdown.Item>

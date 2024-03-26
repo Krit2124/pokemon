@@ -23,13 +23,13 @@ export default function App() {
             setPokemonTypes(data.data)
         })
     }
-}, [pokemonTypes])
+  }, [pokemonTypes])
 
   return (
     <div className="App">
       <Header />
 
-      <SearchField />
+      <SearchField pokemonTypes={pokemonTypes}/>
 
       
     </div>
