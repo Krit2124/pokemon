@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  background-color: #252525;
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Flex-позиционирование */
+.flex-row-sb-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-row-left-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-row-c-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-sb-c {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.flex-col-sb-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.flex-col-sb-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.flex-col-top-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-col-top-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-col-c-c {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-gap-50 {
+  gap: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-gap-40 {
+  gap: 40px;
+}
+
+.flex-gap-30 {
+  gap: 30px;
+}
+
+.flex-gap-25 {
+  gap: 25px;
+}
+
+.flex-gap-20 {
+  gap: 20px;
+}
+
+.flex-gap-15 {
+  gap: 15px;
+}
+
+.flex-gap-10 {
+  gap: 10px;
+}
+
+.flex-gap-5 {
+  gap: 5px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Отдельные элементы */
+.logo {
+  padding: 20px;
+  max-width: 500px;
+  max-height: 200px;
+}
+
+/* Поля ввода */
+.textInput-usual {
+  background-color: var(--background-element-gray);
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.textInput-search {
+  border: 1px solid #757575;
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+
+.textInput-search-field {
+  width: 100%;
+  margin: 0 15px;
+  background: none;
+  border: none;
+}
+
+.textInput-search-field:focus {
+  outline: none;
+}
+
+.textInput-search {
+  width: 100%;
+}
+
+/* Поле поиска */
+.dropdown-item {
+  width: 100%;
+  text-decoration: none;
+  padding: 7px;
+}
+
+.dropdown-item:hover, .dropdown-item.active {
+  background-color: var(--background-element-gray);
+}
+
+.dropdown-menu {
+  background-color: var(--background-panel-black);
+  border-radius: 5px;
+  display: none;
+  z-index: 4;
+}
+
+.show {
+  display: flex;
+}
+
+.textInput-search .btn {
+  white-space: nowrap;
+  background: none;
+  border: none;
+}
+
+/* Контейнеры */
+section .container {
+  padding-top: 30px;
+}
+
+.container {
+  max-width: 1116px;
+  margin: 0 auto;
+}
+
+/* Карты покемонов */
+.pokemonCard {
+  width: 334px;
+  height: 409px;
+  border-radius: 4px;
+  border: 1px solid #DEE2E6;
+  margin-bottom: 20px;
 }
